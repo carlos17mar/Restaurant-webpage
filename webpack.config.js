@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
-devtool: 'inline-source-map',
+  devtool: "inline-source-map",
 
   output: {
     filename: "main.js",
@@ -14,7 +14,7 @@ devtool: 'inline-source-map',
     rules: [
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
