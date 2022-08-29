@@ -9,7 +9,7 @@ export default function createnavBar() {
   //Seteamos los atributos del elemento nav
   navBar.setAttribute(
     "class",
-    "bg-red-600 border-gray-200 px-2 sm:px-4 py-2.01 rounded dark:bg-gray-900"
+    "bg-red-600 border-gray-200 px-2 sm:px-5 py-2.15 rounded dark:bg-gray-900"
   );
   //Seteamos los atributos del div contenedor
   container.setAttribute(
@@ -34,54 +34,46 @@ export default function createnavBar() {
   );
   a.appendChild(span);
   //Creamos los botones
+  const buttonBar = document.createElement("div");
 
-  //Creamos el div que contiene los botones
-  const listDiv = document.createElement("div");
-  listDiv.setAttribute("class", "hidden w-full md:block md:w-auto");
-  listDiv.setAttribute("id", "navbar-default");
-  //Creamos la lista
-  const list = document.createElement("ul");
-  list.setAttribute(
+  const home = document.createElement("button");
+  home.innerHTML = "Inicio";
+  home.setAttribute(
     "class",
-    "flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+    "text-lg no-underline text-white hover:text-white ml-2"
   );
-  //Creamos los botones.
-  //Home
-  const liHome = document.createElement("li");
-  list.appendChild(liHome);
-  const homeButton = document.createElement("button");
-  homeButton.innerHTML = "Inicio";
-  homeButton.setAttribute(
-    "class",
-    "flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
-  );
-  liHome.appendChild(homeButton);
-//Menu
-  const liMenu = document.createElement("li");
-  list.appendChild(liMenu);
-  const menuButton = document.createElement("button");
-  menuButton.innerHTML = "Menu";
-  menuButton.setAttribute(
-    "class",
-    "flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
-  );
-  liMenu.appendChild(menuButton);
-//Contacto
+  buttonBar.appendChild(home);
 
-  const liContacto = document.createElement("li");
-  list.appendChild(liContacto);
-  const contactoButton = document.createElement("button");
-  contactoButton.innerHTML = "Contacto";
-  contactoButton.setAttribute(
+  const menu = document.createElement("button");
+  menu.innerHTML = "Menu";
+  menu.setAttribute(
     "class",
-    "flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+    "text-lg no-underline text-white hover:text-white ml-2"
   );
-  liMenu.appendChild(contactoButton);
+  buttonBar.appendChild(menu);
 
-  listDiv.appendChild(list);
+  const about= document.createElement("button");
+  about.innerHTML = "Conocenos";
+  about.setAttribute(
+    "class",
+    "text-lg no-underline text-white hover:text-white ml-2"
+  );
+  buttonBar.appendChild(about);
+
+  const contacto= document.createElement("button");
+  contacto.innerHTML = "Contacto";
+  contacto.setAttribute(
+    "class",
+    "text-lg no-underline text-white hover:text-white ml-2"
+  );
+  buttonBar.appendChild(contacto);
+
+
+
   container.appendChild(a);
-  container.appendChild(listDiv);
-
   navBar.appendChild(container);
+  container.appendChild(buttonBar);
+  
+
   return navBar;
 }
