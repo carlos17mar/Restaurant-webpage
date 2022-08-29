@@ -24,7 +24,7 @@ export default function createnavBar() {
   //Insertamos el logo en el hipervinculo
   const logo = new Image();
   logo.src = Logo;
-  logo.setAttribute("class", "mr-16 h-24 sm:h-30");
+  logo.setAttribute("class", "px-py mr-16 h-24 sm:h-30");
   a.appendChild(logo);
   const span = document.createElement("span");
   span.innerHTML = "Los Pollos Hermanos";
@@ -40,7 +40,7 @@ export default function createnavBar() {
   home.innerHTML = "Inicio";
   home.setAttribute(
     "class",
-    "text-lg no-underline text-white hover:text-white ml-2"
+    "text-lg no-underline text-white hover:text-black ml-2"
   );
   buttonBar.appendChild(home);
 
@@ -48,7 +48,7 @@ export default function createnavBar() {
   menu.innerHTML = "Menu";
   menu.setAttribute(
     "class",
-    "text-lg no-underline text-white hover:text-white ml-2"
+    "text-lg no-underline text-white hover:text-black ml-2"
   );
   buttonBar.appendChild(menu);
 
@@ -56,7 +56,7 @@ export default function createnavBar() {
   about.innerHTML = "Conocenos";
   about.setAttribute(
     "class",
-    "text-lg no-underline text-white hover:text-white ml-2"
+    "text-lg no-underline text-white hover:text-black ml-2"
   );
   buttonBar.appendChild(about);
 
@@ -64,7 +64,7 @@ export default function createnavBar() {
   contacto.innerHTML = "Contacto";
   contacto.setAttribute(
     "class",
-    "text-lg no-underline text-white hover:text-white ml-2"
+    "text-lg no-underline text-white hover:text-black ml-2"
   );
   buttonBar.appendChild(contacto);
 
