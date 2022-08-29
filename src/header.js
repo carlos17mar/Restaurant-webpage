@@ -30,7 +30,7 @@ export default function createnavBar() {
   span.innerHTML = "Los Pollos Hermanos";
   span.setAttribute(
     "class",
-    "text-white self-center text-4xl font-semibold whitespace-nowrap dark:text-white"
+    "font-burrito text-white self-center text-4xl font-semibold whitespace-nowrap dark:text-white"
   );
   a.appendChild(span);
   //Creamos los botones

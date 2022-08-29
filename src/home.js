@@ -6,7 +6,7 @@ export default function createHome() {
   home.setAttribute("class", "relative");
   //
   const section = document.createElement("section");
-  section.setAttribute("class", "relative bg-white");
+  section.setAttribute("class", "relative bg-white font-burrito");
   //El gradiente blanco que overlapea la imagen
   const gradient = document.createElement("div");
 
@@ -29,19 +29,21 @@ export default function createHome() {
   );
 
   const letterSpaceSon = document.createElement("div");
-  letterSpaceSon.setAttribute(
-    "class",
-    "max-w-xl text-center sm:text-left"
-  );
+  letterSpaceSon.setAttribute("class", "max-w-xl text-center sm:text-left");
   letterSpace.appendChild(letterSpaceSon);
 
-  const title = document.createElement('h1');
-title.setAttribute('class','text-3xl font-extrabold sm:text-5xl');
-title.innerHTML='Los Pollos Hermanos';
-letterSpaceSon.appendChild(title);
+  const title = document.createElement("h1");
+  title.setAttribute("class", "text-3xl font-extrabold sm:text-6xl");
+  title.innerHTML = "Los Pollos Hermanos";
+ 
+  const subtitle = document.createElement('strong');
+    subtitle.setAttribute('class','font-extrabold text-green-700 sm:block');
+    subtitle.innerHTML='Un sabor familiar!'
+    title.appendChild(subtitle);
+  letterSpaceSon.appendChild(title);
 
- section.appendChild(Background);
 
+  section.appendChild(Background);
   section.appendChild(gradient);
   section.appendChild(letterSpace);
   home.appendChild(section);
