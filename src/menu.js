@@ -29,8 +29,70 @@ export default function createMenu() {
   const div31 = document.createElement("div");
   const strong1 = document.createElement("strong");
   div31.appendChild(strong1);
-  div1.appendChild(div3);
+  //Imagenes de los productos
+  //Producto1
+  const img1 = document.createElement("img");
+  img1.setAttribute("class", "object-cover w-full -mt-3 h-96");
+  img1.setAttribute(
+    "src",
+    "https://m.media-amazon.com/images/I/91pYwG-ArJL._SS500_.jpg"
+  );
+  a1.appendChild(img1);
 
+  const h5Bucket = document.createElement("h5");
+  h5Bucket.setAttribute("class", "mt-4 text-m text-black/90");
+  h5Bucket.innerHTML = "El cubo de los hermanos!";
+  a1.appendChild(h5Bucket);
+
+  const div32 = document.createElement("div");
+  div32.setAttribute(
+    "class",
+    "flex items-center justify-between mt-4 font-bold"
+  );
+  const p1 = document.createElement("p");
+  p1.setAttribute("class", "text-lg");
+  p1.innerHTML = "17.99$";
+  div32.appendChild(p1);
+  const p2 = document.createElement("p");
+  p2.setAttribute("class", "text-l");
+  p2.innerHTML = "17 Piezas de pollo.";
+  div32.appendChild(p2);
+  a1.appendChild(div32);
+  //Producto 2
+  const a2 = document.createElement("a");
+  a2.setAttribute("class", "block");
+
+  div3.appendChild(a2);
+  const img2 = document.createElement("img");
+  img2.setAttribute(
+    "class",
+    "object-cover w-full -mt-3 h-96 scale-50 hover:scale-75"
+  );
+  img2.setAttribute(
+    "src",
+    "https://cdn.concreteplayground.com/content/uploads/2019/08/Thirsty-Bird-Newtown-supplied-01.jpg"
+  );
+  a2.appendChild(img2);
+
+  const h5Burger = document.createElement("h5");
+  h5Burger.setAttribute("class", "mt-4 text-m text-black/90");
+  h5Burger.innerHTML = "El pollito!";
+  a2.appendChild(h5Burger);
+
+  const div33 = document.createElement("div");
+  div33.setAttribute(
+    "class",
+    "flex items-center justify-between mt-4 font-bold"
+  );
+  const p3 = document.createElement("p");
+  p3.setAttribute("class", "text-lg");
+  p3.innerHTML = "8.99$";
+  div33.appendChild(p3);
+  const p4 = document.createElement("p");
+  p4.setAttribute("class", "text-l");
+  p4.innerHTML = "Sanwich de pollo clasica";
+  div33.appendChild(p4);
+  a2.appendChild(div33);
 
   div1.appendChild(div3);
   mainSection.appendChild(div1);
