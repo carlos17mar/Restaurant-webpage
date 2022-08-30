@@ -30,7 +30,7 @@ export default function createnavBar() {
   span.innerHTML = "Los Pollos Hermanos";
   span.setAttribute(
     "class",
-    "font-burrito text-white self-center text-4xl font-semibold whitespace-nowrap dark:text-white"
+    "font-burrito tracking-widest text-white self-center text-5xl whitespace-nowrap "
   );
   a.appendChild(span);
   //Creamos los botones
@@ -38,6 +38,7 @@ export default function createnavBar() {
 
   const home = document.createElement("button");
   home.innerHTML = "Inicio";
+  home.setAttribute('id','home');
   home.setAttribute(
     "class",
     "text-lg no-underline text-white hover:text-black ml-2"
@@ -46,34 +47,34 @@ export default function createnavBar() {
 
   const menu = document.createElement("button");
   menu.innerHTML = "Menu";
+  menu.setAttribute("id", "menu");
   menu.setAttribute(
     "class",
     "text-lg no-underline text-white hover:text-black ml-2"
   );
   buttonBar.appendChild(menu);
 
-  const about= document.createElement("button");
+  const about = document.createElement("button");
   about.innerHTML = "Conocenos";
+  about.setAttribute("id", "about");
   about.setAttribute(
     "class",
     "text-lg no-underline text-white hover:text-black ml-2"
   );
   buttonBar.appendChild(about);
 
-  const contacto= document.createElement("button");
+  const contacto = document.createElement("button");
   contacto.innerHTML = "Contacto";
+  contacto.setAttribute("id", "contacto");
   contacto.setAttribute(
     "class",
     "text-lg no-underline text-white hover:text-black ml-2"
   );
   buttonBar.appendChild(contacto);
 
-
-
   container.appendChild(a);
   navBar.appendChild(container);
   container.appendChild(buttonBar);
-  
 
   return navBar;
 }
