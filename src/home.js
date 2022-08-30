@@ -29,26 +29,31 @@ export default function createHome() {
   );
 
   const letterSpaceSon = document.createElement("div");
-  letterSpaceSon.setAttribute("class", "pr-30 max-w-xl text-center sm:text-left");
+  letterSpaceSon.setAttribute(
+    "class",
+    "pr-30 max-w-xl text-center sm:text-left"
+  );
   letterSpace.appendChild(letterSpaceSon);
 
   const title = document.createElement("h1");
   title.setAttribute("class", "	text-3xl sm:text-6xl");
   title.innerHTML = "Los Pollos Hermanos";
- 
-  const subtitle = document.createElement('h3');
-    subtitle.setAttribute('class','pr-20 text-green-700 sm:block');
-    subtitle.innerHTML='Un sabor familiar!';
-    title.appendChild(subtitle);
+
+  const subtitle = document.createElement("h3");
+  subtitle.setAttribute("class", "pr-20 text-green-700 sm:block");
+  subtitle.innerHTML = "Un sabor familiar!";
+  title.appendChild(subtitle);
   letterSpaceSon.appendChild(title);
- const video = document.createElement('iframe');
- video.setAttribute('width','900');
- video.setAttribute('height','480');
- video.setAttribute('class','pl-20');
+  const video = document.createElement("iframe");
+  video.setAttribute("width", "900");
+  video.setAttribute("height", "480");
+  video.setAttribute("class", "pl-20");
 
- video.setAttribute('src','https://www.youtube.com/embed/f7xj_hn1euM?autoplay=1&mute=1&loop=1?controls=0');
-letterSpace.appendChild(video)
-
+  video.setAttribute(
+    "src",
+    "https://www.youtube.com/embed/f7xj_hn1euM?autoplay=1&mute=1&loop=1?controls=0"
+  );
+  letterSpace.appendChild(video);
 
   section.appendChild(Background);
   section.appendChild(gradient);
